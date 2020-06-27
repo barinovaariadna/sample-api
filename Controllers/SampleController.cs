@@ -28,9 +28,9 @@ namespace Sample.Api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<SampleInfo> Get(int? skip)
+        public IEnumerable<SampleInfo> Get(int? start)
         {
-            return _repository.GetRange(skip ?? 0);
+            return _repository.GetRange(start ?? 0);
         }
     }
 }
