@@ -9,10 +9,6 @@ public class SampleInfosRepository : ISampleInfosRepository
 {
     private ConcurrentDictionary<int, SampleInfo> _sampleInfos = new ConcurrentDictionary<int, SampleInfo>();
 
-    public SampleInfo Get(int id)
-    {
-        throw new NotImplementedException();   
-    }
     public IEnumerable<SampleInfo> GetRange(int skip, int take = 5)
     {
         return _sampleInfos.Skip(skip).Take(take).Select(x => x.Value);
